@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/modal.css">
+{% endblock styles %}
+
+{% set sectionId = "pageHome" %}
+
+{% block content %}
+    <header>
+        <img src="/img/logo.svg" alt="Logomarcar Ecoleta" title="Ecoleta Marketplace">
+        <div>
+            <a href="/createrPointer">
+                <span></span>Cadastre um ponto de coleta</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="content">
+            <h1>Seu marketplace de coleta de resíduos</h1>
+            <p>Ajudamos pessoas a encontrar pontos de coleta de forma eficiente.</p>
+            <a href="#">
+                <span></span>
+                <strong>Pesquisar pontos de coleta</strong>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+       <p> Layout by Rocketseat - <a href="https://github.com/maykbrito" target="_blank"> Mayk Brito </a></p>
+       <p>Done with <strong>❤</strong> by <a href="https://github.com/thainansousa" target="_blank">Thainan Sousa</a> #NLW1</p>
+    </footer>
+{% endblock content %}
+
+{% block modal %}
+    {% include "partials/modal.html" %}
+{% endblock modal %}
+
+{% block script %}
+    <script src="/js/index.js"></script>
+{% endblock script %}

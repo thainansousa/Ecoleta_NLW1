@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<title>Ecoleta - Cadastar Ponto de Coleta</title>
+{% endblock title %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/css/createrPointer.css">
+    <link rel="stylesheet" href="/css/modal.css">  
+{% endblock styles %}
+
+{% set sectionId = "pageCreaterPointer" %}
+{% block header %}
+    {% include "partials/header.html" %}
+{% endblock header %}
+{% block content %}
+    <form action="/savedPointer" method="POST">
+        <h1>Cadastro do ponto de coleta</h1>
+        <fieldset>
+            <legend>
+                <h2>Dados da entidade</h2>
+            </legend>
+            <section class="formGrid">
+                <div>
+                    <label for="nameEntity">Nome da entidade</label>
+                    <input type="text" name="nameEntity" required="required">
+                </div>
+                <div>
+                    <label for="urlImage">Url da Imagem</label>
+                    <input type="url" name="urlImage" required="required">
+                </div>
+
+                <div>
+                    <label for="address">Endereço</label>
+                    <input type="text" name="address" required="required">
+                </div>
+
+                <div>
+                    <label for="numberAndComplement">Número/Complemento</label>
+                    <input type="text" name="numberAndComplement" required="required">
+                </div>
+
+                <div>
+                    <label for="state">Estado</label>
+                    <select name="state" required="required">
+                        <option value="">Selecione um estado</option>
+                    </select>
+
+                    <input type="hidden" name="states">
+                </div>
+                <div>
+                    <label for="city">Cidade</label>
+                    <select name="city" disabled="disabled" required="required">
+                        <option value="">Selecione uma cidade</option>
+                    </select>
+                </div>
+            </section>
+
+        </fieldset>
+        <fieldset>
+            <div class="titleLegends">
+                <legend>
+                    <h2>Ítens de Coleta</h2>
+                </legend>
+                <span>Selecione um ou mais ítens abaixo</span>
+            </div>
+
+            <section class="itemsCollect">
+                <div>
+                    <li data-id="Lâmpadas">
+                        <img src="/img/lampadas.svg" alt="Lâmpadas">
+                        <span>Lâmpadas</span>
+                    </li>
+                </div>
+                <div>
+                    <li data-id="Pilhas e Baterias">
+                        <img src="/img/baterias.svg" alt="Pilhas e Baterias">
+                        <span>Pilhas e Baterias</span>
+                    </li>
+                </div>
+                <div>
+                    <li data-id="Papéis e Papelão">
+                        <img src="/img/papeis-papelao.svg" alt="Papéis e Papelão">
+                        <span>Papéis e Papelão</span>
+                    </li>
+                </div>
+                <div>
+                    <li data-id="Resíduos Eletrônicos">
+                        <img src="img/eletronicos.svg" alt="Resíduos Eletrônicos">
+                        <span>Resíduos Eletrônicos</span>
+                    </li>
+                </div>
+                <div>
+                    <li data-id="Resíduos Orgânicos">
+                        <img src="/img/organicos.svg" alt="Resíduos Orgânicos">
+                        <span>Resíduos Orgânicos</span>
+                    </li>
+                </div>
+                <div>
+                    <li data-id="Óleo de Cozinha">
+                        <img src="/img/oleo.svg" alt="Óleo de Cozinha">
+                        <span>Óleo de Cozinha</span>
+                    </li>
+                </div>
+                <input type="hidden" name="items">
+            </section>
+        </fieldset>
+        <button type="submit">Cadastar ponto de coleta</button>
+    </form>
+{% endblock content %}
+
+{% block modal %}
+    {% if saved %}
+        {% include "partials/modalSaved.html" %}
+    {% endif %}
+{% endblock modal %}
+
+{% block script %}
+    <script src="/js/createrPointer.js"></script>
+{% endblock script %}

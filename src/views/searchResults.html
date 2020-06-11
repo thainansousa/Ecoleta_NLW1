@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+        <title>Ecoleta - Pontos Cadastrados</title>
+{% endblock title %}
+
+{% block styles %}
+        <link rel="stylesheet" href="/css/searchResults.css">
+{% endblock styles %}
+
+{% set sectionId = "searchResults" %}
+
+{% block header %}
+    {% include "partials/header.html" %}
+{% endblock header %}
+
+{% block content %}
+<main id="finded">
+    <div class="searchAmount">
+        {% if total <= 0 %}
+                <h4>
+                        <strong>Nenhum local</strong>
+                        encontrado
+                </h4>
+        {%else%}
+                <h4>
+                        <strong>{{total}} locais</strong>
+                        encontrados
+                </h4>
+        {% endif %}
+                
+    </div>
+        <section class="cards">
+
+               {% for place in places %}
+                        <div class="card">
+                                <img src="{{place.img}}" alt="">
+                                <h2>{{place.nameEntity}}</h2>
+                                <h3>{{place.items}}</h3>
+                                <p>{{place.city}}, {{place.state}}
+                                </br>
+                                {{place.address}}
+                                </br>
+                                N°- {{place.addressTwo}}
+                                </p>
+                        </div>
+               {% endfor %}
+        </section>
+</main>
+{% endblock content %}

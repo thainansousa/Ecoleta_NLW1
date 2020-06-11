@@ -1,0 +1,75 @@
+
+#searchPointer{
+    width: 100%;
+    height: 100vh;
+    background-color: #0E0A14ef;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}
+#searchPointer.hide{
+    display: none;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+form .header h1{
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+form.formSearch a{
+    background-image: url(../img/x.svg);
+    width: 26px;
+    height: 26px;
+    font-size: 0.1px;
+    margin-top: 10px;
+}
+form .header{
+    display: flex;
+    justify-content: space-between;
+    width: 420px;
+}
+form.formSearch input{
+    padding: 16px 24px;
+    border: none;
+    background-color: #f0f0f5;
+    font-size: 16px;
+    border-radius: 8px;
+    outline: none;
+    width: 420px;
+    margin-bottom: 10px;
+}
+form.formSearch button{
+    width: 420px;
+    height: 56px;
+    background-color: var(--green-color);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+form.formSearch button:hover{
+    background-color: #2fb86e;
+    transition: 400ms;
+}
+/* End SearchPointer */
+
+/* ModalSaved */
+#searchPointer .register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#searchPointer .register h1{
+    color: #fff;
+    margin-top: 50px;
+    text-align: center;
+}
+/* End ModalSaved */

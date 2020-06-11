@@ -1,0 +1,122 @@
+/* Start Responsive */
+@media screen and (max-width: 900px){
+    #pageHome main{
+        background-position-x: 70vw;
+        background-position-y: 3vh;
+        width: 100%;
+        padding-bottom: 50px;
+    }
+    #pageHome main .content{
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    #pageHome main .content h1{
+        max-width: 560px;
+    }
+}
+@media screen and (max-width: 700px){
+    #pageHome header{
+        justify-content: center;
+    }
+    #pageHome main{
+        padding-bottom: 100px;
+        margin-top: 0;
+    }
+    #pageHome header div{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        justify-content: center;
+        width: 100%;
+        display: flex;
+    }
+}
+@media screen and (max-width: 500px){
+        #pageHome main .content h1{
+            font-size: 2em;
+        }
+        #pageHome main .content p{
+            font-size: 18px;
+            padding: 5px;
+        }
+}
+/* End Responive */
+
+/* Creater Pointer Responsive */
+@media screen and (max-width: 768px){
+    form{
+        width: 80%;
+    }
+    form .header{
+        width: 100%;
+    }
+    form.formSearch input,
+    form.formSearch button{
+        width: 100%;
+    }
+    main section.cards {
+        display: flex;
+        flex-direction: column;
+    }
+    main#finded{
+        height: auto;
+    }
+    main section.cards img{
+        width: 100%;
+        height: 300px;
+    }
+    main section.cards div{
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 560px){
+    #searchResults .home{
+        display: none;
+    }
+    #searchResults .imgMobile{
+        display: block;
+    }
+}
+@media screen and (max-width: 425px){
+    #pageCreaterPointer header .home a{
+        display: none;
+    }
+    #pageCreaterPointer .imgMobile{
+        display: block;
+        margin-top: 10px;
+    }
+    form{
+        width: 100%;
+        padding: 30px;
+    }
+    form .formGrid{
+        display: flex;
+        flex-direction: column;
+    }
+    form .formGrid div input,
+    form .formGrid div select{
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    form fieldset .titleLegends{
+        flex-direction: column;
+    }
+    form fieldset .titleLegends span{
+        margin-bottom: 15px;
+    }
+    form fieldset section.itemsCollect{
+        display: flex;
+        flex-direction: column;
+    }
+    form button{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 375px){
+    main section.cards img{
+        width: 100%;
+        height: 150px;
+    }
+}
+/* End Poit */

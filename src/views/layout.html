@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        {% block metasTag %}
+        <meta charset="UTF-8">
+        <meta name="description" content="Ecoleta - Seu marketplace de coleta de resíduos">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% endblock metasTag %}
+
+        {% block styles %}{% endblock styles %}
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/responsive.css">
+        {% block title %}
+            <title>Ecoleta</title>
+        {% endblock title %}
+
+        <link rel="shortcut icon" href="/img/icon.svg" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section id="{{sectionId}}">
+            {% block header %}{% endblock header %}
+            {% block content %}{% endblock content %}
+        </section>
+
+        {% block modal %}{% endblock modal %}
+        {% block script %}{% endblock script %}
+    </body>
+</html>

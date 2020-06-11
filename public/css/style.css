@@ -1,0 +1,29 @@
+/* Reset */
+:root{
+    --purple-color: #322153;
+    --green-color: #34cb79; 
+    --ice-color: #f0f0f5;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html,body{
+    height: 100%;
+    background-color: var(--ice-color);
+    -webkit-font-smoothing: antialiased;
+}
+
+a{
+    text-decoration: none;
+    color: var(--purple-color);
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--purple-color);
+}
+
+/* End Reset */
